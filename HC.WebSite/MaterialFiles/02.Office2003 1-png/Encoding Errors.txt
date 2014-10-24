@@ -1,0 +1,61 @@
+﻿Due to the limitations of the supported zip file format, the following file(s) had to be renamed.
+
+Original File Name  ->  New File Name
+同步.png -> File1.png
+排序.png -> File2.png
+添加.png -> File3.png
+编辑.png -> File4.png
+定时.png -> File5.png
+数据库.png -> File6.png
+文件夹2.png -> File7.png
+文件夹1.png -> File8.png
+人头.png -> File9.png
+查找.png -> File10.png
+暂停.png -> File11.png
+清理.png -> File12.png
+缩小.png -> File13.png
+剪切.png -> File14.png
+查找 (2).png -> File15.png
+文件夹查找.png -> File16.png
+执行.png -> File17.png
+查找34.png -> File18.png
+保存.png -> File19.png
+视图.png -> File20.png
+搜索2.png -> File21.png
+查找2.png -> File22.png
+数据同步.png -> File23.png
+提示信息2.png -> File24.png
+导出.png -> File25.png
+查找 (3).png -> File26.png
+搜索文件.png -> File27.png
+编辑2.png -> File28.png
+查找3.png -> File29.png
+文件同步.png -> File30.png
+关闭.png -> File31.png
+文件同步 (2).png -> File32.png
+复制.png -> File33.png
+刷新.png -> File34.png
+文件格式-PPT.png -> File35.png
+复制 (2).png -> File36.png
+配置2.png -> File37.png
+表格.png -> File38.png
+返回.png -> File39.png
+上一级文件夹.png -> File40.png
+撤销.png -> File41.png
+粘贴 (2).png -> File42.png
+粘贴.png -> File43.png
+配置.png -> File44.png
+回收站.png -> File45.png
+后退.png -> File46.png
+手型1.png -> File47.png
+图片.png -> File48.png
+文件格式-img.png -> File49.png
+箭头-右.png -> File50.png
+前进.png -> File51.png
+箭头-左.png -> File52.png
+文件编辑.png -> File53.png
+提示信息.png -> File54.png
+统计.png -> File55.png
+审核通过.png -> File56.png
+帮助.png -> File57.png
+帮助 (2).png -> File58.png

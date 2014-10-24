@@ -1,0 +1,14 @@
+﻿body { margin: 0; font-family: "Helvetica,Arial,FreeSans"; color: #000000; font-size: 12px; }
+.demo_main { padding: 20px; padding-top: 10px; }
+.demo_title { padding: 10px; margin-bottom: 10px; background-color: #D3D8E0; border: solid 1px gray; }
+.demo_content { padding: 10px; margin-bottom: 10px; border: solid 1px gray; }
+.demo_content li { list-style: none; margin-left: -20px; height: 20px; }
+fieldset { border: 1px solid gray; }
+/*=========================================================================*/
+#txtKeyword { width: 235px; }
+#suggestItems { width: 197px; border: 1px solid gray; position: absolute; margin-top: -3px; background: white; }
+#suggestItems li { list-style: none; margin-left: -40px; border-bottom: 1px lightgrey; border-bottom-style: dotted; height: 12px; padding: 5px; }
+#suggestItems li:hover { background-color: lemonchiffon; }
+.keywords { color: red; }
+.cur { background-color: lemonchiffon; }
+a { text-decoration: none; }

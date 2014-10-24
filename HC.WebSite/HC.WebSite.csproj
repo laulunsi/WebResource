@@ -1,0 +1,1734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9207F8A4-0E87-4821-99F1-3C5E2E7FD88A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HC.WebSite</RootNamespace>
+    <AssemblyName>HC.WebSite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Reference\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\Reference\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu">
+      <HintPath>..\Reference\PanGu.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.HighLight">
+      <HintPath>..\Reference\PanGu.HighLight.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.Lucene.Analyzer">
+      <HintPath>..\Reference\PanGu.Lucene.Analyzer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CodeView\CodeMirror\codemirror.js" />
+    <Content Include="CodeView\CodeMirror\csharpcolors.css" />
+    <Content Include="CodeView\CodeMirror\docs.css" />
+    <Content Include="CodeView\CodeMirror\editor.js" />
+    <Content Include="CodeView\CodeMirror\highlight.js" />
+    <Content Include="CodeView\CodeMirror\mirrorframe.js" />
+    <Content Include="CodeView\CodeMirror\parsecsharp.js" />
+    <Content Include="CodeView\CodeMirror\parsecss.js" />
+    <Content Include="CodeView\CodeMirror\parsedummy.js" />
+    <Content Include="CodeView\CodeMirror\parsehtmlmixed.js" />
+    <Content Include="CodeView\CodeMirror\parsejavascript.js" />
+    <Content Include="CodeView\CodeMirror\parsesparql.js" />
+    <Content Include="CodeView\CodeMirror\parsexml.js" />
+    <Content Include="CodeView\CodeMirror\select.js" />
+    <Content Include="CodeView\CodeMirror\stringstream.js" />
+    <Content Include="CodeView\CodeMirror\tokenize.js" />
+    <Content Include="CodeView\CodeMirror\tokenizecsharp.js" />
+    <Content Include="CodeView\CodeSearch.aspx" />
+    <Content Include="CodeView\CodeGuide.aspx" />
+    <Content Include="CodeView\CodeView.aspx" />
+    <Content Include="CodeView\CodeDownLoad.aspx" />
+    <Content Include="CodeView\CodeMirror\tokenizejavascript.js" />
+    <Content Include="CodeView\CodeMirror\undo.js" />
+    <Content Include="CodeView\CodeMirror\unittests.js" />
+    <Content Include="CodeView\CodeMirror\util.js" />
+    <Content Include="DataBaseTools\DataBaseEdit.aspx" />
+    <Content Include="DataBaseTools\DataBaseManage.aspx" />
+    <Content Include="DataBaseTools\DataBaseQuery.aspx" />
+    <Content Include="DataBaseTools\DataBaseSchema.aspx" />
+    <Content Include="DataBaseTools\DataBaseGuide.aspx" />
+    <Content Include="DataBaseTools\DataBaseCreateTable.aspx" />
+    <Content Include="DataBaseTools\DataBaseSchemaGuide.aspx" />
+    <Content Include="DataFormat\HtmlFormater.aspx" />
+    <Content Include="DataFormat\jsbeautify\jsbeautify.js" />
+    <Content Include="DataFormat\JavascriptFormater.aspx" />
+    <Content Include="DataFormat\Json\c.js" />
+    <Content Include="DataFormat\Json\Collapsed.gif" />
+    <Content Include="DataFormat\Json\demo.JPG" />
+    <Content Include="DataFormat\Json\Expanded.gif" />
+    <Content Include="DataFormat\Json\index.htm" />
+    <Content Include="DataFormat\Json\m.js" />
+    <Content Include="DataFormat\Json\s.css" />
+    <Content Include="DataFormat\Json\urchin.js" />
+    <Content Include="DataFormat\XmlFormater.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Demo\images\1.jpg" />
+    <Content Include="Demo\images\2.jpg" />
+    <Content Include="Demo\images\3-2.jpg" />
+    <Content Include="Demo\images\3-1.jpg" />
+    <Content Include="Demo\images\4.jpg" />
+    <Content Include="Demo\images\btn-focus.png" />
+    <Content Include="Demo\images\f-img-list-bg.jpg" />
+    <Content Include="Demo\images\focus-page-btns.png" />
+    <Content Include="Demo\index.htm" />
+    <Content Include="Demo\script\jquery.easing.min.js" />
+    <Content Include="Demo\script\jquery.focusbanner.js" />
+    <Content Include="Demo\script\jquery.min.js" />
+    <Content Include="Demo\style\css.css" />
+    <Content Include="Demo\about.htm" />
+    <Content Include="jQueryDemoManage\jQueryDemoAddDemo.aspx" />
+    <Content Include="jQueryDemoManage\jQueryDemoDownLoad.aspx" />
+    <Content Include="History\Log.txt" />
+    <Content Include="LeftGuide.aspx" />
+    <Content Include="jQueryDemoManage\jQueryDemoPreviewDirectory.aspx" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\accept.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\add.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\alarm.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\anchor.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_add.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_cascade.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_delete.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_double.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_edit.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_error.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_form.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_get.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_go.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_home.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_key.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_lightning.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_link.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_osx.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_osx_terminal.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_put.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_side_boxes.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_side_contract.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_side_expand.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_side_list.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_side_tree.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_split.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_tile_horizontal.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_tile_vertical.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_view_columns.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_view_detail.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_view_gallery.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_view_icons.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_view_list.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_view_tile.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_view_xp.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\application_view_xp_terminal.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_branch.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_divide.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_in.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_inout.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_join.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_left.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_merge.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_out.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_redo.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_refresh.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_right.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\arrow_undo.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\asterisk_orange.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\attach.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\attach_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\award_star_gold.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bandaid.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\basket.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bell.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bin_closed.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\blog.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\blueprint.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\blueprint_horizontal.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bluetooth.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bomb.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\book.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bookmark.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bookmark_book.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bookmark_book_open.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bookmark_document.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bookmark_folder.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\books.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\book_addresses.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\book_next.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\book_open.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\book_previous.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\box.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\brick.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bricks.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\briefcase.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bug.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\buildings.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bullet_add_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bullet_add_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\bullet_key.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cake.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\calculator.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\calendar_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\calendar_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\camera.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cancel.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\car.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cart.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cd.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\chart_bar.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\chart_curve.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\chart_line.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\chart_organisation.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\chart_pie.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\clipboard_paste_image.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\clipboard_sign.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\clipboard_text.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\clock.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cog.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\coins.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\color_swatch_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\color_swatch_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\comment.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\compass.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\compress.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\computer.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\connect.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\contrast.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_eject.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_end.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_equalizer.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_fastforward.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_pause.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_play.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_repeat.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_rewind.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_start.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_stop.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\control_wheel.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\counter.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\counter_count.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\counter_count_up.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\counter_reset.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\counter_stop.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cross.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cross_octagon.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cross_octagon_fram.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cross_shield.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cross_shield_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\crown.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\crown_bronze.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\crown_silver.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\css.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cursor.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\cut.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\dashboard.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\data.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\database.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\databases.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\delete.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\delivery.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\desktop.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\desktop_empty.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\direction.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\disconnect.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\disk.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_access.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_break.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_convert.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_excel_csv.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_excel_table.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_film.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_illustrator.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_music.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_music_playlist.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_offlice.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_page.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_page_previous.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_pdf.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_photoshop.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_resize.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_resize_actual.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_shred.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_stand.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_table.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_tag.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\doc_text_image.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\door.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\door_in.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drawer.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drink.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drink_empty.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_burn.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_cd.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_cd_empty.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_delete.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_disk.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_error.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_go.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_link.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_network.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\drive_rename.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\dvd.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\email.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\email_open.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\email_open_image.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\emoticon_evilgrin.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\emoticon_grin.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\emoticon_happy.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\emoticon_smile.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\emoticon_surprised.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\emoticon_tongue.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\emoticon_unhappy.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\emoticon_waii.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\emoticon_wink.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\envelope.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\envelope_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\error.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\exclamation.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\exclamation_octagon_fram.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\eye.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\feed.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\feed_ballon.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\feed_document.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\female.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\film.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\films.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\find.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\flag_blue.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\folder.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\font.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\funnel.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\grid.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\grid_dot.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\group.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\hammer.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\hammer_screwdriver.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\hand.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\hand_point.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\heart.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\heart_break.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\heart_empty.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\heart_half.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\heart_small.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\help.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\highlighter.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\house.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\html.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\images.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\image_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\image_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\inbox.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ipod.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ipod_cast.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\joystick.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\key.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\keyboard.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layers.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layer_treansparent.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_header_footer_3.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_header_footer_3_mix.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_join.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_join_vertical.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_select.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_select_content.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_select_footer.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_select_sidebar.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_split.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\layout_split_vertical.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\lifebuoy.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\lightbulb.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\lightbulb_off.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\lightning.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\link.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\link_break.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\lock.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\lock_unlock.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\magnet.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\magnifier.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\magnifier_zoom_in.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\male.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\map.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\marker.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\medal_bronze_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\medal_gold_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\media_player_small_blue.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\microphone.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\mobile_phone.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\money.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\money_dollar.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\money_euro.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\money_pound.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\money_yen.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\monitor.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\mouse.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\music.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\music_beam.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\neutral.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\new.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\newspaper.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\note.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\nuclear.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\package.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_2_copy.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_code.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_copy.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_excel.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_lightning.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_paste.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_red.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_refresh.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_save.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_cplusplus.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_csharp.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_cup.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_database.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_delete.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_dvd.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_edit.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_error.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_excel.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_find.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_flash.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_freehand.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_gear.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_get.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_paintbrush.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_paste.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_php.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_picture.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_powerpoint.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_put.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_ruby.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_stack.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_star.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_swoosh.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_text.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_text_width.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_tux.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_vector.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_visualstudio.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_width.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_word.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_world.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_wrench.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\page_white_zip.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\paintbrush.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\paintcan.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\palette.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\paper_bag.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\paste_plain.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\paste_word.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\pencil.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\photo.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\photos.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\photo_album.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\piano.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\picture.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\pilcrow.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\pill.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\pin.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\pipette.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\plaing_card.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\plug.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\plugin.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\printer.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\projection_screen.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\projection_screen_present.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\rainbow.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\report.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\rocket.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\rosette.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\rss.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ruby.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ruler_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ruler_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ruler_crop.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ruler_triangle.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\safe.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\script.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\selection.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\selection_select.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\server.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shading.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_aling_bottom.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_aling_center.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_aling_left.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_aling_middle.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_aling_right.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_aling_top.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_flip_horizontal.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_flip_vertical.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_group.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_handles.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_move_back.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_move_backwards.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_move_forwards.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_move_front.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shape_square.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\shield.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sitemap.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\slide.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\slides.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\slides_stack.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\smiley_confuse.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\smiley_cool.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\smiley_cry.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\smiley_fat.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\smiley_mad.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\smiley_red.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\smiley_roll.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\smiley_slim.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\smiley_yell.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\socket.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sockets.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sort.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sort_alphabet.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sort_date.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sort_disable.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sort_number.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sort_price.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sort_quantity.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sort_rating.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sound.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sound_note.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\spellcheck.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sport_8ball.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sport_basketball.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sport_football.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sport_golf.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sport_raquet.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sport_shuttlecock.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sport_soccer.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sport_tennis.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\stamp.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\star_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\star_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\status_online.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\stop.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\style.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sum.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\sum_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\switch.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\tab.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\table.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\tag.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\tag_blue.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\target.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\telephone.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\television.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\textfield.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\textfield_rename.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_align_center.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_align_justify.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_align_left.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_align_right.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_allcaps.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_bold.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_columns.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_dropcaps.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_heading_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_horizontalrule.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_indent.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_indent_remove.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_italic.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_kerning.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_letterspacing.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_letter_omega.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_linespacing.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_list_bullets.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_list_numbers.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_lowercase.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_padding_bottom.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_padding_left.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_padding_right.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_padding_top.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_signature.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_smallcaps.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_strikethrough.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\text_subscript.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ticket.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\timeline_marker.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\traffic.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\transmit.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\trophy.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\trophy_bronze.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\trophy_silver.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_combo_box.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_saccordion.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_slider_1.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_slider_2.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_tab_bottom.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_tab_content.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_tab_disable.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_tab_side.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_text_field_hidden.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\ui_text_field_password.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\umbrella.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\user.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\user_black_female.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\user_business.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\user_business_boss.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\user_female.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\user_silhouette.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\user_thief.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\user_thief_baldie.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\vcard.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\vector.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\wait.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\wall.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\wall_break.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\wall_brick.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\wall_disable.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\wand.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\weather_clouds.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\weather_cloudy.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\weather_lightning.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\weather_rain.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\weather_snow.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\weather_sun.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\webcam.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\world.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\zone.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\zones.png" />
+    <Content Include="MaterialFiles\01.网页小图标%28png%29\zone_money.png" />
+    <Content Include="MaterialLibrary\MaterialDownLoad.aspx" />
+    <Content Include="MaterialLibrary\MaterialGuide.aspx" />
+    <Content Include="MaterialLibrary\MaterialPreview.aspx" />
+    <Content Include="RightMain.aspx" />
+    <Content Include="Scripts\codemirror-3.16\addon\comment\comment.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\comment\continuecomment.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\dialog\dialog.css" />
+    <Content Include="Scripts\codemirror-3.16\addon\dialog\dialog.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\display\fullscreen.css" />
+    <Content Include="Scripts\codemirror-3.16\addon\display\fullscreen.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\display\placeholder.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\edit\closebrackets.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\edit\closetag.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\edit\continuelist.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\edit\matchbrackets.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\edit\matchtags.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\edit\trailingspace.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\fold\brace-fold.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\fold\comment-fold.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\fold\foldcode.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\fold\foldgutter.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\fold\indent-fold.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\fold\xml-fold.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\hint\anyword-hint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\hint\html-hint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\hint\javascript-hint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\hint\pig-hint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\hint\python-hint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\hint\show-hint.css" />
+    <Content Include="Scripts\codemirror-3.16\addon\hint\show-hint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\hint\xml-hint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\lint\coffeescript-lint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\lint\javascript-lint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\lint\json-lint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\lint\lint.css" />
+    <Content Include="Scripts\codemirror-3.16\addon\lint\lint.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\merge\dep\diff_match_patch.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\merge\merge.css" />
+    <Content Include="Scripts\codemirror-3.16\addon\merge\merge.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\mode\loadmode.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\mode\multiplex.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\mode\multiplex_test.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\mode\overlay.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\runmode\colorize.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\runmode\runmode-standalone.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\runmode\runmode.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\runmode\runmode.node.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\scroll\scrollpastend.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\search\match-highlighter.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\search\search.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\search\searchcursor.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\selection\active-line.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\selection\mark-selection.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\tern\tern.css" />
+    <Content Include="Scripts\codemirror-3.16\addon\tern\tern.js" />
+    <Content Include="Scripts\codemirror-3.16\addon\tern\worker.js" />
+    <Content Include="Scripts\codemirror-3.16\keymap\emacs.js" />
+    <Content Include="Scripts\codemirror-3.16\keymap\extra.js" />
+    <Content Include="Scripts\codemirror-3.16\keymap\vim.js" />
+    <Content Include="Scripts\codemirror-3.16\lib\codemirror.css" />
+    <Content Include="Scripts\codemirror-3.16\lib\codemirror.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\apl\apl.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\apl\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\asterisk\asterisk.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\asterisk\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\clike\clike.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\clike\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\clike\scala.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\clojure\clojure.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\clojure\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\cobol\cobol.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\cobol\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\commonlisp\commonlisp.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\commonlisp\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\css\css.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\css\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\css\scss.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\css\scss_test.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\css\test.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\diff\diff.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\diff\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\d\d.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\d\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\ecl\ecl.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\ecl\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\erlang\erlang.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\erlang\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\gas\gas.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\gas\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\gfm\gfm.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\gfm\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\gfm\test.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\go\go.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\go\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\groovy\groovy.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\groovy\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\haml\haml.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\haml\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\haml\test.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\haskell\haskell.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\haskell\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\haxe\haxe.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\haxe\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\htmlembedded\htmlembedded.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\htmlembedded\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\htmlmixed\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\http\http.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\http\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\jade\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\jade\jade.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\javascript\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\javascript\javascript.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\javascript\test.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\javascript\typescript.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\jinja2\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\jinja2\jinja2.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\less\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\less\less.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\livescript\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\livescript\livescript.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\lua\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\lua\lua.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\markdown\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\markdown\markdown.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\markdown\test.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\meta.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\mirc\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\mirc\mirc.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\nginx\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\nginx\nginx.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\ntriples\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\ntriples\ntriples.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\ocaml\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\ocaml\ocaml.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\pascal\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\pascal\pascal.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\perl\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\perl\perl.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\php\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\php\php.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\pig\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\pig\pig.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\properties\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\properties\properties.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\python\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\python\python.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\q\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\q\q.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\rpm\changes\changes.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\rpm\changes\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\rpm\spec\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\rpm\spec\spec.css" />
+    <Content Include="Scripts\codemirror-3.16\mode\rpm\spec\spec.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\rst\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\rst\rst.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\ruby\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\ruby\ruby.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\rust\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\rust\rust.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\r\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\r\r.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\sass\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\sass\sass.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\scheme\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\scheme\scheme.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\shell\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\shell\shell.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\sieve\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\sieve\sieve.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\smalltalk\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\smalltalk\smalltalk.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\smartymixed\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\smartymixed\smartymixed.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\smarty\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\smarty\smarty.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\sparql\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\sparql\sparql.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\sql\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\sql\sql.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\stex\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\stex\stex.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\stex\test.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\tcl\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\tcl\tcl.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\tiddlywiki\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\tiddlywiki\tiddlywiki.css" />
+    <Content Include="Scripts\codemirror-3.16\mode\tiddlywiki\tiddlywiki.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\tiki\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\tiki\tiki.css" />
+    <Content Include="Scripts\codemirror-3.16\mode\tiki\tiki.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\turtle\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\turtle\turtle.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\vbscript\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\vbscript\vbscript.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\vb\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\vb\vb.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\velocity\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\velocity\velocity.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\verilog\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\verilog\verilog.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\xml\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\xml\xml.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\xquery\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\xquery\test.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\xquery\xquery.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\yaml\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\yaml\yaml.js" />
+    <Content Include="Scripts\codemirror-3.16\mode\z80\index.html" />
+    <Content Include="Scripts\codemirror-3.16\mode\z80\z80.js" />
+    <Content Include="Scripts\codemirror-3.16\theme\3024-day.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\3024-night.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\ambiance-mobile.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\ambiance.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\base16-dark.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\base16-light.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\blackboard.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\cobalt.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\eclipse.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\elegant.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\erlang-dark.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\lesser-dark.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\midnight.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\monokai.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\neat.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\night.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\paraiso-dark.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\paraiso-light.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\rubyblue.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\solarized.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\the-matrix.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\tomorrow-night-eighties.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\twilight.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\vibrant-ink.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\xq-dark.css" />
+    <Content Include="Scripts\codemirror-3.16\theme\xq-light.css" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-bg_diagonals-thick_8_333333_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-bg_glass_40_111111_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-bg_glass_55_1c1c1c_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-bg_highlight-hard_100_f9f9f9_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-bg_highlight-hard_40_aaaaaa_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-bg_highlight-soft_50_aaaaaa_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-bg_inset-hard_45_cd0a0a_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-bg_inset-hard_55_ffeb80_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-icons_4ca300_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-icons_ededed_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-icons_ffcf29_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\black-tie\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-icons_004276_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\blitzer\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\cupertino\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dark-hive\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-bg_dots-medium_30_0b58a2_4x4.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-bg_dots-small_20_333333_2x2.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-bg_dots-small_30_a32d00_2x2.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-bg_dots-small_40_00498f_2x2.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-bg_flat_40_292929_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-bg_gloss-wave_20_111111_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-icons_00498f_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-icons_98d2fb_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-icons_9ccdfc_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\dot-luv\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-bg_flat_55_994d53_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-bg_flat_55_fafafa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-bg_gloss-wave_30_3d3644_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-bg_highlight-soft_100_dcd9de_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-bg_highlight-soft_100_eae6ea_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-bg_highlight-soft_25_30273a_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-bg_highlight-soft_45_5f5964_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-icons_734d99_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-icons_8d78a5_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-icons_a8a3ae_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-icons_ebccce_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\eggplant\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-bg_diagonals-small_25_c5ddfc_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-bg_diagonals-thick_20_e69700_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-bg_diagonals-thick_22_1484e6_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-bg_diagonals-thick_26_2293f7_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-bg_flat_0_e69700_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-bg_flat_0_e6b900_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-bg_highlight-soft_100_f9f9f9_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-bg_inset-hard_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-icons_0a82eb_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-icons_0b54d5_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-icons_5fa5e3_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-icons_fcdd4a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\excite-bike\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-icons_666666_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\flick\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-bg_diagonals-small_40_db4865_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-bg_diagonals-small_50_93c3cd_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-bg_diagonals-small_50_ff3853_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-bg_diagonals-small_75_ccd232_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-bg_dots-medium_80_ffff38_4x4.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-bg_dots-small_35_35414f_2x2.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-bg_flat_75_ba9217_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-bg_white-lines_85_f7f7ba_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-icons_88a206_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-icons_c02669_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-icons_e1e463_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-icons_ffeb33_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\hot-sneaks\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-bg_glass_100_f5f0e5_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-bg_glass_25_cb842e_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-bg_glass_70_ede4d4_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-bg_highlight-hard_75_f5f5b5_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-bg_inset-soft_100_f4f0ec_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-icons_c47a23_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-icons_cb672b_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-icons_f08000_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-icons_f35f07_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\humanity\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-icons_4eb305_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-icons_72b42d_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\le-frog\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-bg_glass_15_5f391b_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-bg_gloss-wave_20_1c160d_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-bg_gloss-wave_25_453326_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-bg_gloss-wave_30_44372c_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-bg_highlight-soft_20_201913_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-bg_highlight-soft_20_619226_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-bg_inset-soft_10_201913_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-icons_9bcc60_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-icons_add978_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-icons_e3ddc9_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-icons_f1fd86_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\mint-choc\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-icons_999999_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\overcast\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-bg_diagonal-maze_20_6e4f1c_10x10.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-bg_diagonal-maze_40_000000_10x10.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-bg_fine-grain_10_eceadf_60x60.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-bg_fine-grain_10_f8f7f6_60x60.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-bg_fine-grain_15_eceadf_60x60.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-bg_fine-grain_15_f7f3de_60x60.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-bg_fine-grain_15_ffffff_60x60.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-bg_fine-grain_65_654b24_60x60.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-bg_fine-grain_68_b83400_60x60.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-icons_3572ac_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-icons_8c291d_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-icons_b83400_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-icons_fbdb93_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\pepper-grinder\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\redmond\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\smoothness\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-bg_glass_55_fcf0ba_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-bg_gloss-wave_100_ece8da_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-bg_highlight-hard_100_f5f3e5_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-bg_highlight-hard_100_fafaf4_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-bg_highlight-hard_15_459e00_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-bg_highlight-hard_95_cccccc_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-bg_highlight-soft_25_67b021_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-bg_highlight-soft_95_ffedad_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-bg_inset-soft_15_2b2922_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-icons_808080_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-icons_847e71_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-icons_8DC262_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-icons_eeeeee_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\south-street\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\start\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-icons_d19405_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-icons_eb990f_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\images\ui-icons_ffe180_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\sunny\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-bg_diamond_10_4f4221_10x8.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-bg_diamond_20_372806_10x8.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-bg_diamond_25_675423_10x8.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-bg_diamond_25_d5ac5d_10x8.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-bg_diamond_8_261803_10x8.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-bg_diamond_8_443113_10x8.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-bg_flat_75_ddd4b0_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-icons_070603_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-icons_e8e2b5_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-icons_e9cd86_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-icons_efec9f_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-icons_f2ec64_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-icons_f9f2bd_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\swanky-purse\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-bg_diagonals-small_50_262626_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-bg_flat_0_303030_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-bg_flat_0_4c4c4c_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-bg_glass_40_0a0a0a_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-bg_glass_55_f1fbe5_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-bg_glass_60_000000_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-bg_gloss-wave_55_000000_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-bg_gloss-wave_85_9fda58_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-bg_gloss-wave_95_f6ecd5_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-icons_000000_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-icons_1f1f1f_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-icons_9fda58_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-icons_b8ec79_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\trontastic\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-darkness\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\ui-lightness\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-bg_gloss-wave_16_121212_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-bg_highlight-hard_15_888888_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-bg_highlight-hard_55_555555_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-bg_highlight-soft_35_adadad_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-bg_highlight-soft_60_dddddd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-bg_inset-soft_15_121212_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-icons_666666_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-icons_aaaaaa_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-icons_c98000_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\images\ui-icons_f29a00_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\css\vader\jquery.ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\jquery.jsrender\jsrender.js" />
+    <Content Include="Scripts\jquery.loadding\jquery.bgiframe.min.js" />
+    <Content Include="Scripts\jquery.loadding\loading-min.js" />
+    <Content Include="Scripts\jquery.loadding\loading.css" />
+    <Content Include="Scripts\jquery.loadding\loading.gif" />
+    <Content Include="Scripts\jquery.pagination\jquery.pagination.js" />
+    <Content Include="Scripts\jquery.pagination\pagination.css" />
+    <Content Include="Scripts\jquery.treeview\images\add.png" />
+    <Content Include="Scripts\jquery.treeview\images\ajax-loader.gif" />
+    <Content Include="Scripts\jquery.treeview\images\table.png" />
+    <Content Include="Scripts\jquery.treeview\images\delete.png" />
+    <Content Include="Scripts\jquery.treeview\images\demo.html" />
+    <Content Include="Scripts\jquery.treeview\images\edit.gif" />
+    <Content Include="Scripts\jquery.treeview\images\eye.png" />
+    <Content Include="Scripts\jquery.treeview\images\file.gif" />
+    <Content Include="Scripts\jquery.treeview\images\find.png" />
+    <Content Include="Scripts\jquery.treeview\images\folder-closed.gif" />
+    <Content Include="Scripts\jquery.treeview\images\folder.gif" />
+    <Content Include="Scripts\jquery.treeview\images\lightning.png" />
+    <Content Include="Scripts\jquery.treeview\images\minus.gif" />
+    <Content Include="Scripts\jquery.treeview\images\page_white_put.png" />
+    <Content Include="Scripts\jquery.treeview\images\plus.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-black-line.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-black.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-default-line.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-default.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-famfamfam-line.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-famfamfam.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-gray-line.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-gray.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-red-line.gif" />
+    <Content Include="Scripts\jquery.treeview\images\treeview-red.gif" />
+    <Content Include="Scripts\jquery.treeview\jquery.contextmenu.r2-min.js" />
+    <Content Include="Scripts\jquery.treeview\jquery.contextmenu.r2.js" />
+    <Content Include="Scripts\jquery.treeview\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.treeview\jquery.treeview.css" />
+    <Content Include="Scripts\jquery.treeview\jquery.treeview.js" />
+    <Content Include="Scripts\lhgdialog\lhgcore.lhgdialog.min.js" />
+    <Content Include="Scripts\lhgdialog\lhgdialog.min.js" />
+    <Content Include="Scripts\lhgdialog\skins\blue.css" />
+    <Content Include="Scripts\lhgdialog\skins\blue\blue_s.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\blue_s2.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\blue_titbtn.gif" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_b.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_l.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_lb.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_lt.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_lt2.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_r.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_rb.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_rt.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_rt2.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_t.png" />
+    <Content Include="Scripts\lhgdialog\skins\blue\ie6\ui_t2.png" />
+    <Content Include="Scripts\lhgdialog\skins\chrome.css" />
+    <Content Include="Scripts\lhgdialog\skins\chrome\chrome_s.gif" />
+    <Content Include="Scripts\lhgdialog\skins\chrome\chrome_s2.gif" />
+    <Content Include="Scripts\lhgdialog\skins\chrome\chrome_s3.gif" />
+    <Content Include="Scripts\lhgdialog\skins\default.css" />
+    <Content Include="Scripts\lhgdialog\skins\discuz.css" />
+    <Content Include="Scripts\lhgdialog\skins\iblack.css" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\iblack_s.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\iblack_s2.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_b.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_l.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_lb.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_lt.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_lt2.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_r.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_rb.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_rt.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_rt2.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_t.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblack\ie6\ui_t2.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue.css" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\iblue_s.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\iblue_s2.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_b.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_l.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_lb.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_lt.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_lt2.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_r.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_rb.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_rt.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_rt2.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_t.png" />
+    <Content Include="Scripts\lhgdialog\skins\iblue\ie6\ui_t2.png" />
+    <Content Include="Scripts\lhgdialog\skins\icons\32X32\fail.png" />
+    <Content Include="Scripts\lhgdialog\skins\icons\32X32\hits.png" />
+    <Content Include="Scripts\lhgdialog\skins\icons\32X32\i.png" />
+    <Content Include="Scripts\lhgdialog\skins\icons\32X32\succ.png" />
+    <Content Include="Scripts\lhgdialog\skins\icons\alert.gif" />
+    <Content Include="Scripts\lhgdialog\skins\icons\confirm.gif" />
+    <Content Include="Scripts\lhgdialog\skins\icons\discuz_bg.gif" />
+    <Content Include="Scripts\lhgdialog\skins\icons\error.gif" />
+    <Content Include="Scripts\lhgdialog\skins\icons\face-sad.png" />
+    <Content Include="Scripts\lhgdialog\skins\icons\face-smile.png" />
+    <Content Include="Scripts\lhgdialog\skins\icons\gb_tip_layer.png" />
+    <Content Include="Scripts\lhgdialog\skins\icons\gb_tip_layer_ie6.png" />
+    <Content Include="Scripts\lhgdialog\skins\icons\lhgcore.gif" />
+    <Content Include="Scripts\lhgdialog\skins\icons\loading.gif" />
+    <Content Include="Scripts\lhgdialog\skins\icons\prompt.gif" />
+    <Content Include="Scripts\lhgdialog\skins\icons\success.gif" />
+    <Content Include="Scripts\lhgdialog\skins\icons\tips.gif" />
+    <Content Include="Scripts\lhgdialog\skins\idialog.css" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\idialog_s.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\idialog_s2.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_b.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_close.hover.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_close.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_l.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_lb.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_lt.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_r.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_rb.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_rt.png" />
+    <Content Include="Scripts\lhgdialog\skins\idialog\ie6\ui_t.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen.css" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\ie6\ui_b.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\ie6\ui_l.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\ie6\ui_lb.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\ie6\ui_lt.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\ie6\ui_r.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\ie6\ui_rb.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\ie6\ui_rt.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\ie6\ui_t.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\igreen_s.png" />
+    <Content Include="Scripts\lhgdialog\skins\igreen\igreen_s2.png" />
+    <Content Include="Scripts\lhgdialog\skins\jtop.css" />
+    <Content Include="Scripts\lhgdialog\skins\mac.css" />
+    <Content Include="Scripts\whir.ajax.js" />
+    <Content Include="Scripts\whir.ajaxpage.js" />
+    <Content Include="Scripts\whir.common.js" />
+    <Content Include="Scripts\whir.default.js" />
+    <Content Include="jQueryDemoManage\jQueryDemoPreviewFile.aspx" />
+    <Content Include="Style\images\bell.png" />
+    <Content Include="Style\images\book_open.png" />
+    <Content Include="Style\images\cross.png" />
+    <Content Include="Style\images\database.png" />
+    <Content Include="Style\images\demo.png" />
+    <Content Include="Style\images\doc_offlice.png" />
+    <Content Include="Style\images\find.png" />
+    <Content Include="Style\images\grid.png" />
+    <Content Include="Style\images\hammer.png" />
+    <Content Include="Style\images\index.png" />
+    <Content Include="Style\images\lightning.png" />
+    <Content Include="Style\images\monitor.png" />
+    <Content Include="Style\images\page_white_word.png" />
+    <Content Include="Style\images\server.png" />
+    <Content Include="Style\images\text_align_justify.png" />
+    <Content Include="Style\images\text_columns.png" />
+    <Content Include="Style\whir.common.css" />
+    <Content Include="Style\images\Logo.png" />
+    <Content Include="Style\images\Logo2.png" />
+    <Content Include="Template\demo\index.htm" />
+    <Content Include="Template\demo\scripts\demo.js" />
+    <Content Include="Template\demo\scripts\jquery-1.9.1.js" />
+    <Content Include="Template\demo\style\demo.css" />
+    <Content Include="Waitting.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeView\CodeSearch.aspx.cs">
+      <DependentUpon>CodeSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeView\CodeSearch.aspx.designer.cs">
+      <DependentUpon>CodeSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeView\CodeGuide.aspx.cs">
+      <DependentUpon>CodeGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeView\CodeGuide.aspx.designer.cs">
+      <DependentUpon>CodeGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeView\CodeView.aspx.cs">
+      <DependentUpon>CodeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeView\CodeView.aspx.designer.cs">
+      <DependentUpon>CodeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeView\CodeDownLoad.aspx.cs">
+      <DependentUpon>CodeDownLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeView\CodeDownLoad.aspx.designer.cs">
+      <DependentUpon>CodeDownLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseEdit.aspx.cs">
+      <DependentUpon>DataBaseEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseEdit.aspx.designer.cs">
+      <DependentUpon>DataBaseEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseManage.aspx.cs">
+      <DependentUpon>DataBaseManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseManage.aspx.designer.cs">
+      <DependentUpon>DataBaseManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseQuery.aspx.cs">
+      <DependentUpon>DataBaseQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseQuery.aspx.designer.cs">
+      <DependentUpon>DataBaseQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseSchema.aspx.cs">
+      <DependentUpon>DataBaseSchema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseSchema.aspx.designer.cs">
+      <DependentUpon>DataBaseSchema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseGuide.aspx.cs">
+      <DependentUpon>DataBaseGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseGuide.aspx.designer.cs">
+      <DependentUpon>DataBaseGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseCreateTable.aspx.cs">
+      <DependentUpon>DataBaseCreateTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseCreateTable.aspx.designer.cs">
+      <DependentUpon>DataBaseCreateTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseSchemaGuide.aspx.cs">
+      <DependentUpon>DataBaseSchemaGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBaseTools\DataBaseSchemaGuide.aspx.designer.cs">
+      <DependentUpon>DataBaseSchemaGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataFormat\HtmlFormater.aspx.cs">
+      <DependentUpon>HtmlFormater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataFormat\HtmlFormater.aspx.designer.cs">
+      <DependentUpon>HtmlFormater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataFormat\JavascriptFormater.aspx.cs">
+      <DependentUpon>JavascriptFormater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataFormat\JavascriptFormater.aspx.designer.cs">
+      <DependentUpon>JavascriptFormater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataFormat\XmlFormater.aspx.cs">
+      <DependentUpon>XmlFormater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataFormat\XmlFormater.aspx.designer.cs">
+      <DependentUpon>XmlFormater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jQueryDemoManage\jQueryDemoAddDemo.aspx.cs">
+      <DependentUpon>jQueryDemoAddDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jQueryDemoManage\jQueryDemoAddDemo.aspx.designer.cs">
+      <DependentUpon>jQueryDemoAddDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jQueryDemoManage\jQueryDemoDownLoad.aspx.cs">
+      <DependentUpon>jQueryDemoDownLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jQueryDemoManage\jQueryDemoDownLoad.aspx.designer.cs">
+      <DependentUpon>jQueryDemoDownLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeftGuide.aspx.cs">
+      <DependentUpon>LeftGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeftGuide.aspx.designer.cs">
+      <DependentUpon>LeftGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jQueryDemoManage\jQueryDemoPreviewDirectory.aspx.cs">
+      <DependentUpon>jQueryDemoPreviewDirectory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jQueryDemoManage\jQueryDemoPreviewDirectory.aspx.designer.cs">
+      <DependentUpon>jQueryDemoPreviewDirectory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialLibrary\MaterialDownLoad.aspx.cs">
+      <DependentUpon>MaterialDownLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialLibrary\MaterialDownLoad.aspx.designer.cs">
+      <DependentUpon>MaterialDownLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialLibrary\MaterialGuide.aspx.cs">
+      <DependentUpon>MaterialGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialLibrary\MaterialGuide.aspx.designer.cs">
+      <DependentUpon>MaterialGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialLibrary\MaterialPreview.aspx.cs">
+      <DependentUpon>MaterialPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialLibrary\MaterialPreview.aspx.designer.cs">
+      <DependentUpon>MaterialPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="jQueryDemoManage\jQueryDemoPreviewFile.aspx.cs">
+      <DependentUpon>jQueryDemoPreviewFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jQueryDemoManage\jQueryDemoPreviewFile.aspx.designer.cs">
+      <DependentUpon>jQueryDemoPreviewFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RightMain.aspx.cs">
+      <DependentUpon>RightMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RightMain.aspx.designer.cs">
+      <DependentUpon>RightMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Waitting.aspx.cs">
+      <DependentUpon>Waitting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Waitting.aspx.designer.cs">
+      <DependentUpon>Waitting.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="CodeView\LuceneNetIndex\" />
+    <Folder Include="CodeView\Source\" />
+    <Folder Include="jQueryDemos\" />
+    <Folder Include="Template\demo\style\images\" />
+    <Folder Include="Temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\ResourceReference.config" />
+    <Content Include="Config\HttpHandlers.config" />
+    <Content Include="Config\HttpModules.config" />
+    <Content Include="Config\Pages.config" />
+    <Content Include="Config\AppSettings.config" />
+    <Content Include="Config\ConnectionStrings.config" />
+    <Content Include="Config\RewriterConfig.config" />
+    <None Include="Scripts\codemirror-3.16\mode\livescript\livescript.ls" />
+    <None Include="Template\demo.rar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HC.Foundation\HC.Foundation.csproj">
+      <Project>{E092F513-850B-4483-BB28-D0C3D1F4EDA7}</Project>
+      <Name>HC.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Framework\HC.Framework.csproj">
+      <Project>{4FEA652E-7B85-4FD1-8F24-102A94D813E4}</Project>
+      <Name>HC.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Model\HC.Model.csproj">
+      <Project>{A04D2438-4C1A-4CDE-A014-A2EBD724A915}</Project>
+      <Name>HC.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Service\HC.Service.csproj">
+      <Project>{179D4DEE-09DD-4C41-9378-C7CD100D9828}</Project>
+      <Name>HC.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19663</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
